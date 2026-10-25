@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorry Naima — Part 2 😭</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-shape one"></div>
+  <div class="bg-shape two"></div>
+
+  <main class="app">
+    <div class="progress"><span id="progressBar"></span></div>
+
+    <section class="screen active" id="screen1">
+      <div class="emoji">🥲</div>
+      <p class="tiny">A very serious website</p>
+      <h1>Sorry Naima<br><span>Part 2</span> 😭</h1>
+      <p class="subtitle">Apparently Part 1 wasn't enough...</p>
+      <button onclick="nextScreen()">Continue →</button>
+    </section>
+
+    <section class="screen" id="screen2">
+      <div class="emoji">😭🙏</div>
+      <p class="tiny">Official request</p>
+      <h2>Please sorry<br>baat karlein</h2>
+      <p class="subtitle">I know you're mad again. I am once again requesting your cooperation.</p>
+      <button onclick="nextScreen()">Okay fine 🙄</button>
+      <button class="secondary" onclick="nextScreen()">I'm listening...</button>
+    </section>
+
+    <section class="screen" id="screen3">
+      <div class="emoji">📋</div>
+      <p class="tiny">Select one</p>
+      <h2>So... what level of mad are we at today?</h2>
+      <div class="choices">
+        <button class="choice" data-msg="A little annoyed 😐" onclick="choose(this)">😐 <span>A little annoyed</span></button>
+        <button class="choice" data-msg="Properly mad 😤" onclick="choose(this)">😤 <span>Properly mad</span></button>
+        <button class="choice" data-msg="Very mad 😭" onclick="choose(this)">😭 <span>Very mad</span></button>
+        <button class="choice" data-msg="Don't even talk to me 💀" onclick="choose(this)">💀 <span>Don't even talk to me</span></button>
+        <button class="choice" data-msg="You need to explain yourself 🤨" onclick="choose(this)">🤨 <span>You need to explain yourself</span></button>
+        <button class="choice" data-msg="I'm mad but this is funny 😂" onclick="choose(this)">😂 <span>I'm mad but this is funny</span></button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen4">
+      <div class="emoji" id="responseEmoji">🫡</div>
+      <p class="tiny">Official response</p>
+      <h2 id="responseTitle">Noted.</h2>
+      <p class="subtitle" id="responseText"></p>
+      <button onclick="nextScreen()">Okay, I have more to say →</button>
+    </section>
+
+    <section class="screen" id="screen5">
+      <div class="emoji">💬</div>
+      <p class="tiny">Your turn</p>
+      <h2>Okay, tell me what you want to say.</h2>
+      <p class="subtitle">No multiple choice this time. Say whatever you actually want 😭</p>
+      <textarea id="message" maxlength="1000" placeholder="Type your message here..."></textarea>
+      <div class="counter"><span id="count">0</span>/1000</div>
+      <button id="sendBtn" onclick="sendMessage()">Send it →</button>
+      <p class="form-note">Your message will be sent privately to the person responsible for this situation. 🫡</p>
+    </section>
+
+    <section class="screen" id="screen6">
+      <div class="emoji">📨</div>
+      <p class="tiny">Message received</p>
+      <h2 id="finalTitle">Thank you for communicating with management.</h2>
+      <p class="subtitle">Your complaint has been forwarded to the person responsible for making you mad.</p>
+      <div class="final-box">Unfortunately, that person is me. 😭</div>
+      <button onclick="restart()">One last sorry 🥲</button>
+    </section>
+
+    <p class="footer">Sorry Naima — Part 2 • Case still pending 🫡</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
