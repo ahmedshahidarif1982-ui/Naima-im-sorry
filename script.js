@@ -51,7 +51,7 @@ async function sendMessage() {
 
   // Formspree setup:
   // Replace YOUR_FORMSPREE_ENDPOINT below with your Formspree endpoint.
-  const endpoint = "YOUR_FORMSPREE_ENDPOINT";
+const endpoint = "https://formspree.io/f/mdeeennp";
 
   if (endpoint === "YOUR_FORMSPREE_ENDPOINT") {
     alert("The website is ready, but email sending still needs the Formspree endpoint added in script.js.");
